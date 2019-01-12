@@ -7,9 +7,10 @@ const initialState: RootState.PlaceState = {
   places: [],
 };
 
+
 export const placeReducer = handleActions<RootState.PlaceState, Table>(
   {
-    [PlaceActions.Type.LOAD_TABLE]: (state, action) => {
+    [PlaceActions.Type.NORMALIZE_TABLE]: (state, action) => {
       return Object.assign({}, {
         places: action.payload!.map((row) => ({
           address: row[0],
