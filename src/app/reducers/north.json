@@ -1,0 +1,142 @@
+[
+  {
+    "address": "one-family dwelling",
+    "city": "CA",
+    "state": "Foster City",
+    "zipcode": "94404",
+    "category": "2545, 777 Shell Blvd"
+  },
+  {
+    "address": "restricted density multiple dwelling",
+    "city": "CA",
+    "state": "Menlo Park",
+    "zipcode": "94025",
+    "category": "2800 Sand Hill Road"
+  },
+  {
+    "address": "historic preservation overlay zone",
+    "city": "CA",
+    "state": "Foster City",
+    "zipcode": "94404",
+    "category": "919 Edgewater Blvd"
+  },
+  {
+    "address": "limited manufacturing",
+    "city": "CA",
+    "state": "Belmont",
+    "zipcode": "94002",
+    "category": "1309 Elmer St A"
+  },
+  {
+    "address": "restricted density multiple dwelling",
+    "city": "CA",
+    "state": "San Carlos",
+    "zipcode": "94070",
+    "category": "1106 Alameda de las Pulgas"
+  },
+  {
+    "address": "limited ground floor commercial",
+    "city": "CA",
+    "state": "Redwood City",
+    "zipcode": "94063",
+    "category": "2006 Broadway"
+  },
+  {
+    "address": "restricted industrial",
+    "city": "CA",
+    "state": "Menlo Park",
+    "zipcode": "94027",
+    "category": "299 Alameda de las Pulgas"
+  },
+  {
+    "address": "one-family dwelling",
+    "city": "CA",
+    "state": "Redwood City",
+    "zipcode": "94063",
+    "category": "1555 El Camino Real"
+  },
+  {
+    "address": "limited manufacturing",
+    "city": "CA",
+    "state": "Half Moon Bay",
+    "zipcode": "94019",
+    "category": "250 Poplar St"
+  },
+  {
+    "address": "restricted light industrial",
+    "city": "CA",
+    "state": "Hayward",
+    "zipcode": "94544",
+    "category": "1768-1798 Canterbury Ln"
+  },
+  {
+    "address": "restricted density multiple dwelling",
+    "city": "CA",
+    "state": "Daly City",
+    "zipcode": "94015",
+    "category": "260 Washington St"
+  },
+  {
+    "address": "historic preservation overlay zone",
+    "city": "CA",
+    "state": "Redwood City",
+    "zipcode": "94063",
+    "category": "840 Sweeney Ave"
+  },
+  {
+    "address": "limited ground floor commercial",
+    "city": "CA",
+    "state": "Pacifica",
+    "zipcode": "94044",
+    "category": "104 Hilton Way"
+  },
+  {
+    "address": "two-family dwellings",
+    "city": "CA",
+    "state": "Redwood City",
+    "zipcode": "94063",
+    "category": "2645 Fair Oaks Ave"
+  },
+  {
+    "address": "one-family dwelling",
+    "city": "CA",
+    "state": "Burlingame",
+    "zipcode": "94010",
+    "category": "1715 Quesada Way"
+  },
+  {
+    "address": "two-family dwellings",
+    "city": "CA",
+    "state": "Fremont",
+    "zipcode": "94538",
+    "category": "39324 Argonaut Way"
+  },
+  {
+    "address": "restricted industrial",
+    "city": "CA",
+    "state": "Palo Alto",
+    "zipcode": "94301",
+    "category": "535 Ramona St"
+  },
+  {
+    "address": "one-family dwelling",
+    "city": "CA",
+    "state": "Redwood City",
+    "zipcode": "94061",
+    "category": "2521 Goodwin Ave"
+  },
+  {
+    "address": "restricted light industrial",
+    "city": "CA",
+    "state": "Woodside",
+    "zipcode": "94062",
+    "category": "17288 Skyline Blvd"
+  },
+  {
+    "address": "restricted density multiple dwelling",
+    "city": "CA",
+    "state": "Menlo Park",
+    "zipcode": "94025",
+    "category": "3567 Alameda de las Pulgas"
+  }
+]
