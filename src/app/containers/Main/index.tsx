@@ -5,6 +5,7 @@ import {PlaceActions} from "app/actions/place";
 import {RouteComponentProps} from "react-router";
 import {connect} from "react-redux";
 import {RootState} from "app/reducers";
+import {InputFile} from "app/components/InputFile";
 
 export interface Props extends RouteComponentProps<void> {
   actions: PlaceActions;
@@ -20,6 +21,11 @@ export interface Props extends RouteComponentProps<void> {
 )
 export class Main extends React.Component<Props> {
   render() {
-    return <div>HELLO</div>;
+    return <div>
+      <InputFile
+        onLoad={(data) => console.log(data)}
+        onError={(event) => console.log(event)}
+      />
+    </div>;
   }
 }
