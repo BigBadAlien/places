@@ -7,8 +7,8 @@ import { connect } from "react-redux";
 import { RootState } from "app/reducers";
 import { InputFile } from "app/components/InputFile";
 import { Place } from '../../models/Place';
-import Table from 'antd/es/table/Table';
 import '!style-loader!css-loader!antd/dist/antd.css'
+import { PlaceList } from '../../components/PlaceList';
 
 
 export interface Props extends RouteComponentProps<void> {
@@ -37,26 +37,7 @@ export class Main extends React.Component<Props> {
         onLoad={(data) => this.handleLoad(data as string)}
         onError={(event) => console.log(event)}
       />
-
-      <Table dataSource={this.props.places}
-             columns={[{
-               title: 'Address',
-               dataIndex: 'address',
-             }, {
-               title: 'City',
-               dataIndex: 'city',
-             }, {
-               title: 'State',
-               dataIndex: 'state',
-             }, {
-               title: 'Zip Code',
-               dataIndex: 'zipcode',
-             }, {
-               title: 'Category',
-               dataIndex: 'category',
-             }]}
-             pagination={false}
-      />
+      <PlaceList places={this.props.places}/>
     </div>;
   }
 }

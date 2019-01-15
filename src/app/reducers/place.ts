@@ -12,12 +12,13 @@ export const placeReducer = handleActions<RootState.PlaceState, Table>(
   {
     [PlaceActions.Type.NORMALIZE_TABLE]: (state, action) => {
       return Object.assign({}, {
-        places: action.payload!.map((row) => ({
+        places: action.payload!.map((row, index) => ({
           address: row[0],
           city: row[1],
           state: row[2],
           zipcode: row[3],
           category: row[4],
+          id: index,
         }))
       });
     },

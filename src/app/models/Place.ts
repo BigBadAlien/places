@@ -5,4 +5,5 @@ export interface Place {
   state: string;
   zipcode: string;
   category: string;
+  id: number;
 }

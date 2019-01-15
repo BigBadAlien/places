@@ -4,139 +4,159 @@
     "city": "CA",
     "state": "Foster City",
     "zipcode": "94404",
-    "category": "2545, 777 Shell Blvd"
+    "category": "2545, 777 Shell Blvd",
+    "id": 0
   },
   {
     "address": "restricted density multiple dwelling",
     "city": "CA",
     "state": "Menlo Park",
     "zipcode": "94025",
-    "category": "2800 Sand Hill Road"
+    "category": "2800 Sand Hill Road",
+    "id": 1
   },
   {
     "address": "historic preservation overlay zone",
     "city": "CA",
     "state": "Foster City",
     "zipcode": "94404",
-    "category": "919 Edgewater Blvd"
+    "category": "919 Edgewater Blvd",
+    "id": 2
   },
   {
     "address": "limited manufacturing",
     "city": "CA",
     "state": "Belmont",
     "zipcode": "94002",
-    "category": "1309 Elmer St A"
+    "category": "1309 Elmer St A",
+    "id": 3
   },
   {
     "address": "restricted density multiple dwelling",
     "city": "CA",
     "state": "San Carlos",
     "zipcode": "94070",
-    "category": "1106 Alameda de las Pulgas"
+    "category": "1106 Alameda de las Pulgas",
+    "id": 4
   },
   {
     "address": "limited ground floor commercial",
     "city": "CA",
     "state": "Redwood City",
     "zipcode": "94063",
-    "category": "2006 Broadway"
+    "category": "2006 Broadway",
+    "id": 5
   },
   {
     "address": "restricted industrial",
     "city": "CA",
     "state": "Menlo Park",
     "zipcode": "94027",
-    "category": "299 Alameda de las Pulgas"
+    "category": "299 Alameda de las Pulgas",
+    "id": 6
   },
   {
     "address": "one-family dwelling",
     "city": "CA",
     "state": "Redwood City",
     "zipcode": "94063",
-    "category": "1555 El Camino Real"
+    "category": "1555 El Camino Real",
+    "id": 7
   },
   {
     "address": "limited manufacturing",
     "city": "CA",
     "state": "Half Moon Bay",
     "zipcode": "94019",
-    "category": "250 Poplar St"
+    "category": "250 Poplar St",
+    "id": 8
   },
   {
     "address": "restricted light industrial",
     "city": "CA",
     "state": "Hayward",
     "zipcode": "94544",
-    "category": "1768-1798 Canterbury Ln"
+    "category": "1768-1798 Canterbury Ln",
+    "id": 9
   },
   {
     "address": "restricted density multiple dwelling",
     "city": "CA",
     "state": "Daly City",
     "zipcode": "94015",
-    "category": "260 Washington St"
+    "category": "260 Washington St",
+    "id": 10
   },
   {
     "address": "historic preservation overlay zone",
     "city": "CA",
     "state": "Redwood City",
     "zipcode": "94063",
-    "category": "840 Sweeney Ave"
+    "category": "840 Sweeney Ave",
+    "id": 11
   },
   {
     "address": "limited ground floor commercial",
     "city": "CA",
     "state": "Pacifica",
     "zipcode": "94044",
-    "category": "104 Hilton Way"
+    "category": "104 Hilton Way",
+    "id": 12
   },
   {
     "address": "two-family dwellings",
     "city": "CA",
     "state": "Redwood City",
     "zipcode": "94063",
-    "category": "2645 Fair Oaks Ave"
+    "category": "2645 Fair Oaks Ave",
+    "id": 13
   },
   {
     "address": "one-family dwelling",
     "city": "CA",
     "state": "Burlingame",
     "zipcode": "94010",
-    "category": "1715 Quesada Way"
+    "category": "1715 Quesada Way",
+    "id": 14
   },
   {
     "address": "two-family dwellings",
     "city": "CA",
     "state": "Fremont",
     "zipcode": "94538",
-    "category": "39324 Argonaut Way"
+    "category": "39324 Argonaut Way",
+    "id": 15
   },
   {
     "address": "restricted industrial",
     "city": "CA",
     "state": "Palo Alto",
     "zipcode": "94301",
-    "category": "535 Ramona St"
+    "category": "535 Ramona St",
+    "id": 16
   },
   {
     "address": "one-family dwelling",
     "city": "CA",
     "state": "Redwood City",
     "zipcode": "94061",
-    "category": "2521 Goodwin Ave"
+    "category": "2521 Goodwin Ave",
+    "id": 17
   },
   {
     "address": "restricted light industrial",
     "city": "CA",
     "state": "Woodside",
     "zipcode": "94062",
-    "category": "17288 Skyline Blvd"
+    "category": "17288 Skyline Blvd",
+    "id": 18
   },
   {
     "address": "restricted density multiple dwelling",
     "city": "CA",
     "state": "Menlo Park",
     "zipcode": "94025",
-    "category": "3567 Alameda de las Pulgas"
+    "category": "3567 Alameda de las Pulgas",
+    "id": 19
   }
 ]

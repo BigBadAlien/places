@@ -1,0 +1,15 @@
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.header,
+.col {
+  padding: 16px 16px;
+  width: 20%;
+}
