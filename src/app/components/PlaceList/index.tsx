@@ -32,7 +32,9 @@ export const PlaceList: React.SFC<Props> = (props) => {
   return <div className={style.container}>
     <div className={style.row}>
       {props.columns
-        .map((key) => <div className={style.header} key={key}>{key}</div>)}
+        .map((header) => <div className={style.header} key={header}>
+          <div className={style.content}>{header}</div>
+        </div>)}
     </div>
     <DragDropContext onDragEnd={(result: DropResult) => {
       if (result.destination) {
@@ -65,7 +67,7 @@ export const PlaceList: React.SFC<Props> = (props) => {
                       className={style.col}
                     >
                       {props.places.map((item, placeIndex) => (
-                        <div key={placeIndex}>{item[columnIndex as keyof Place]}</div>
+                        <div key={placeIndex} className={style.content}>{item[columnIndex as keyof Place]}</div>
                       ))}
                     </div>
                   )}

@@ -10,6 +10,12 @@
 
 .header,
 .col {
-  padding: 16px 16px;
   width: 20%;
+}
+
+.content {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 16px;
+  height: 54px;
+  overflow: auto;
 }
