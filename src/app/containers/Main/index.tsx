@@ -14,12 +14,14 @@ import { PlaceList } from '../../components/PlaceList';
 export interface Props extends RouteComponentProps<void> {
   actions: PlaceActions;
   places: Place[];
+  columns: string[];
 }
 
 @connect(
-  (state: RootState): Pick<Props, 'places'> => {
+  (state: RootState): Pick<Props, 'places' | 'columns'> => {
     return {
-      places: state.place.places
+      places: state.place.places,
+      columns: state.place.columns,
     };
   },
   (dispatch: Dispatch): Pick<Props, 'actions'> => ({
@@ -37,7 +39,7 @@ export class Main extends React.Component<Props> {
         onLoad={(data) => this.handleLoad(data as string)}
         onError={(event) => console.log(event)}
       />
-      <PlaceList places={this.props.places}/>
+      <PlaceList places={this.props.places} columns={this.props.columns}/>
     </div>;
   }
 }

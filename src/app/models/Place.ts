@@ -1,9 +1,3 @@
+import { Tuple } from '../../../types/tuple';
 
-export interface Place {
-  address: string;
-  city: string;
-  state: string;
-  zipcode: string;
-  category: string;
-  id: number;
-}
+export type Place = Tuple<string, 5>;

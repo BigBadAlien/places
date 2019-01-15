@@ -6,6 +6,7 @@ import { Place } from "app/models/Place";
 export namespace RootState {
   export interface PlaceState {
     places: Place[];
+    columns: string[];
   }
 }
 

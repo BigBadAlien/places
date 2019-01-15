@@ -5,21 +5,21 @@ import { RootState } from './index';
 
 const initialState: RootState.PlaceState = {
   places: [],
+  columns: [
+    'Address',
+    'City',
+    'State',
+    'Zip Code',
+    'Category',
+  ]
 };
 
 
 export const placeReducer = handleActions<RootState.PlaceState, Table>(
   {
-    [PlaceActions.Type.NORMALIZE_TABLE]: (state, action) => {
-      return Object.assign({}, {
-        places: action.payload!.map((row, index) => ({
-          address: row[0],
-          city: row[1],
-          state: row[2],
-          zipcode: row[3],
-          category: row[4],
-          id: index,
-        }))
+    [PlaceActions.Type.SET_TABLE]: (state, action) => {
+      return Object.assign({}, state, {
+        places: action.payload!
       });
     },
   },

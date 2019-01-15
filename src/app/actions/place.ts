@@ -7,7 +7,7 @@ import * as csv from 'csvtojson';
 
 export namespace PlaceActions {
   export enum Type {
-    NORMALIZE_TABLE = 'NORMALIZE_TABLE'
+    SET_TABLE = 'SET_TABLE'
   }
 
   export const loadTable = function(
@@ -19,11 +19,11 @@ export namespace PlaceActions {
         output: 'csv'
       }).fromString(payload);
 
-      dispatch(mapTable(table));
+      dispatch(setTable(table));
     };
   };
 
-  export const mapTable = createAction<Table>(Type.NORMALIZE_TABLE);
+  export const setTable = createAction<Table>(Type.SET_TABLE);
 }
 
 export type PlaceActions = Omit<typeof PlaceActions, 'Type'>;
