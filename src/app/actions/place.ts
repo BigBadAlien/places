@@ -4,7 +4,7 @@ import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../reducers';
 import { AnyAction } from 'redux';
 import * as csv from 'csvtojson';
-import { MoveColumnData } from '../models/MoveColumnData';
+import { MoveColumnParams } from '../models/MoveColumnParams';
 
 export namespace PlaceActions {
   export enum Type {
@@ -26,7 +26,7 @@ export namespace PlaceActions {
   };
 
   export const setTable = createAction<Table>(Type.SET_TABLE);
-  export const moveColumn = createAction<MoveColumnData>(Type.MOVE_COLUMN);
+  export const moveColumn = createAction<MoveColumnParams>(Type.MOVE_COLUMN);
 }
 
 export type PlaceActions = Omit<typeof PlaceActions, 'Type'>;

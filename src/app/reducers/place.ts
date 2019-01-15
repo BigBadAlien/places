@@ -1,7 +1,7 @@
 import { Action, handleActions } from 'redux-actions';
 import { PlaceActions } from '../actions/place';
 import { RootState } from './index';
-import { MoveColumnData } from '../models/MoveColumnData';
+import { MoveColumnParams } from '../models/MoveColumnParams';
 
 const initialState: RootState.PlaceState = {
   places: [],
@@ -22,7 +22,7 @@ export const placeReducer = handleActions<RootState.PlaceState, any>(
         places: action.payload!
       });
     },
-    [PlaceActions.Type.MOVE_COLUMN]: (state, action: Action<MoveColumnData>) => {
+    [PlaceActions.Type.MOVE_COLUMN]: (state, action: Action<MoveColumnParams>) => {
       return Object.assign({}, state, {
         places: state.places.map((place) => {
           if (action.type === PlaceActions.Type.MOVE_COLUMN) {

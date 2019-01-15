@@ -9,6 +9,7 @@ import { InputFile } from "app/components/InputFile";
 import { Place } from '../../models/Place';
 import '!style-loader!css-loader!antd/dist/antd.css'
 import { PlaceList } from '../../components/PlaceList';
+import { MoveColumnParams } from '../../models/MoveColumnParams';
 
 
 export interface Props extends RouteComponentProps<void> {
@@ -33,13 +34,20 @@ export class Main extends React.Component<Props> {
     this.props.actions.loadTable(data);
   }
 
+  private onColumnMove = (params: MoveColumnParams) => {
+    this.props.actions.moveColumn(params);
+  };
+
   render() {
     return <div>
       <InputFile
         onLoad={(data) => this.handleLoad(data as string)}
         onError={(event) => console.log(event)}
       />
-      <PlaceList places={this.props.places} columns={this.props.columns}/>
+      <PlaceList places={this.props.places}
+                 columns={this.props.columns}
+                 onColumnMove={this.onColumnMove}
+      />
     </div>;
   }
 }

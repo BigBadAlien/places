@@ -8,12 +8,14 @@ import {
   DraggingStyle,
   Droppable,
   DropResult,
-  NotDraggingStyle, ResponderProvided
+  NotDraggingStyle,
 } from 'react-beautiful-dnd';
+import { MoveColumnParams } from '../../models/MoveColumnParams';
 
 interface Props {
   places: Place[];
   columns: string[];
+  onColumnMove: (params: MoveColumnParams) => void;
 }
 
 
@@ -32,8 +34,13 @@ export const PlaceList: React.SFC<Props> = (props) => {
       {props.columns
         .map((key) => <div className={style.header} key={key}>{key}</div>)}
     </div>
-    <DragDropContext onDragEnd={(result: DropResult, provided: ResponderProvided) => {
-      console.log('onDragEnd', result, provided);
+    <DragDropContext onDragEnd={(result: DropResult) => {
+      if (result.destination) {
+        props.onColumnMove({
+          from: result.source.index,
+          to: result.destination.index,
+        });
+      }
     }}>
       <Droppable droppableId='droppable' direction='horizontal'>
         {(provided, snapshot) => (
