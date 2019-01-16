@@ -80,4 +80,3 @@ export const PlaceList: React.SFC<Props> = (props) => {
     </DragDropContext>
   </div>;
 };
-//
