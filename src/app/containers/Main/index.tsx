@@ -15,6 +15,7 @@ import { GeoMap } from '../../components/GeoMap';
 import { environment } from '../../../environment';
 import * as style from './style.css';
 import { MarkerData } from '../../models/MarkerData';
+import { Alert } from 'antd';
 
 
 export interface Props extends RouteComponentProps<void> {
@@ -41,15 +42,22 @@ export class Main extends React.Component<Props> {
     withGoogleMap(() => (
       <div>
         <GeoMap markers={this.props.markers}/>
-        <InputFile
-          onLoad={(data) => this.handleLoad(data as string)}
-          onError={(event) => console.log(event)}
-        />
-        <button onClick={() => this.props.actions.showMarkers()}>Show places</button>
-        <PlaceList places={this.props.places}
-                   columns={this.props.columns}
-                   onColumnMove={this.onColumnMove}
-        />
+        <div className={style.actions}>
+          <InputFile
+            onLoad={(data) => this.handleLoad(data as string)}
+            onError={(event) => console.log(event)}
+          />
+          <button onClick={() => this.props.actions.showMarkers()}>Show places on the map</button>
+        </div>
+        {this.props.places.length > 0 ?
+          <>
+            <Alert message="You can sort columns by drag and drop" type="warning" />
+            <PlaceList places={this.props.places}
+                       columns={this.props.columns}
+                       onColumnMove={this.onColumnMove}
+            />
+          </> :
+          <Alert message="Please, load a table" type="warning" />}
       </div>
     ))
   );

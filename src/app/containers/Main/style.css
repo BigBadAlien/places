@@ -7,3 +7,9 @@
 .map {
   height: 300px;
 }
+
+.actions {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
