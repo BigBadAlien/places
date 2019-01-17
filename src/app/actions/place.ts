@@ -1,5 +1,5 @@
 import { createAction } from "redux-actions";
-import { Table } from "app/models/Table";
+import { SetCurrentTablePayload, Table } from "app/models/Table";
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../reducers';
 import { AnyAction } from 'redux';
@@ -24,6 +24,7 @@ export namespace PlaceActions {
     SET_MARKER = 'SET_MARKER',
     SET_MARKER_ERROR = 'FETCH_MARKER_ERROR',
     GENERATE_COLORS = 'GENERATE_COLORS',
+    SET_CURRENT_TABLE = 'SET_CURRENT_TABLE',
   }
 
   export const loadTable = function (
@@ -45,7 +46,7 @@ export namespace PlaceActions {
       dispatch(generateColors());
       const state = getState();
 
-      const queue = fetchPositions(state.place.places);
+      const queue = fetchPositions(state.place.places[state.place.currentPaceTableId || 0]);
 
         queue.forEach((fetchPositionRequest) => {
           fetchPositionRequest.then((result) => dispatch(setMarker({
@@ -96,6 +97,7 @@ export namespace PlaceActions {
   export const setMarker = createAction<MarkerData>(Type.SET_MARKER);
   export const setMarkerError = createAction<{ address: string }>(Type.SET_MARKER_ERROR);
   export const generateColors = createAction(Type.GENERATE_COLORS);
+  export const setCurrentTable = createAction<SetCurrentTablePayload>(Type.SET_CURRENT_TABLE);
 }
 
 export type PlaceActions = Omit<typeof PlaceActions, 'Type'>;

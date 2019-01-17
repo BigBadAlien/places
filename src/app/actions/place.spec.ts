@@ -30,7 +30,7 @@ describe('Place actions', () => {
   it('showMarkers', () => {
     const store = mockStore({
       place: Object.assign({}, initialState, {
-        places: orderedTable,//
+        places: [orderedTable],
         colors: {
           [(orderedTable as any)[0][CATEGORY_COLUMN_INDEX] as string]: 'ffffff',
           [(orderedTable as any)[1][CATEGORY_COLUMN_INDEX] as string]: '000000',
@@ -42,7 +42,6 @@ describe('Place actions', () => {
       const actions = store.getActions();
       expect(actions[0]).toEqual({type: 'RESET_MARKERS'});
       expect(actions[1]).toEqual({type: 'GENERATE_COLORS'});
-
       expect(actions).toContainEqual({
         type: 'SET_MARKER',
         payload:
@@ -52,7 +51,7 @@ describe('Place actions', () => {
             color: 'ffffff'
           }
       });
-//
+
       expect(actions).toContainEqual({
         type: 'SET_MARKER',
         payload:

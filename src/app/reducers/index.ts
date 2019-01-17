@@ -6,7 +6,8 @@ import { MarkerData } from '../models/MarkerData';
 
 export namespace RootState {
   export interface PlaceState {
-    places: Place[];
+    places: Place[][];
+    currentPaceTableId: number | undefined;
     columns: string[];
     markers: MarkerData[];
     colors: {

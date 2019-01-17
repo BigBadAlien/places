@@ -13,3 +13,7 @@
   display: flex;
   justify-content: center;
 }
+
+.action {
+  margin: 0 30px;
+}
