@@ -47,7 +47,11 @@ export class Main extends React.Component<Props> {
             onLoad={(data) => this.handleLoad(data as string)}
             onError={(event) => console.log(event)}
           />
-          <button onClick={() => this.props.actions.showMarkers()}>Show places on the map</button>
+          <button
+            disabled={this.props.places.length === 0}
+            onClick={() => this.props.actions.showMarkers()}>
+            Show places on the map
+          </button>
         </div>
         {this.props.places.length > 0 ?
           <>
