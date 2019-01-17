@@ -1,0 +1,100 @@
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "581",
+          "short_name": "581",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Foster City Boulevard",
+          "short_name": "Foster City Blvd",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Pilgrim - Triton",
+          "short_name": "Pilgrim - Triton",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Foster City",
+          "short_name": "Foster City",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Mateo County",
+          "short_name": "San Mateo County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94404",
+          "short_name": "94404",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "581 Foster City Blvd, Foster City, CA 94404, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.561935,
+          "lng": -122.269553
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 37.56328398029149,
+            "lng": -122.2682040197085
+          },
+          "southwest": {
+            "lat": 37.5605860197085,
+            "lng": -122.2709019802915
+          }
+        }
+      },
+      "place_id": "ChIJDZekt82ej4ARaooBq5xYScM",
+      "plus_code": {
+        "compound_code": "HP6J+Q5 Foster City, California, United States",
+        "global_code": "849VHP6J+Q5"
+      },
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "status": "OK"
+}

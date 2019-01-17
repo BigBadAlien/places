@@ -10,12 +10,12 @@ import {
   DropResult,
   NotDraggingStyle,
 } from 'react-beautiful-dnd';
-import { MoveColumnParams } from '../../models/MoveColumnParams';
+import { MoveColumnPayload } from '../../models/MoveColumnPayload';
 
 interface Props {
   places: Place[];
   columns: string[];
-  onColumnMove: (params: MoveColumnParams) => void;
+  onColumnMove: (params: MoveColumnPayload) => void;
 }
 
 

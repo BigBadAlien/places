@@ -9,24 +9,27 @@ import { InputFile } from "app/components/InputFile";
 import { Place } from '../../models/Place';
 import '!style-loader!css-loader!antd/dist/antd.css'
 import { PlaceList } from '../../components/PlaceList';
-import { MoveColumnParams } from '../../models/MoveColumnParams';
+import { MoveColumnPayload } from '../../models/MoveColumnPayload';
 import { withGoogleMap, withScriptjs } from 'react-google-maps';
 import { GeoMap } from '../../components/GeoMap';
 import { environment } from '../../../environment';
 import * as style from './style.css';
+import { MarkerData } from '../../models/MarkerData';
 
 
 export interface Props extends RouteComponentProps<void> {
   actions: PlaceActions;
   places: Place[];
   columns: string[];
+  markers: MarkerData[];
 }
 
 @connect(
-  (state: RootState): Pick<Props, 'places' | 'columns'> => {
+  (state: RootState): Pick<Props, 'places' | 'columns' | 'markers'> => {
     return {
       places: state.place.places,
       columns: state.place.columns,
+      markers: state.place.markers,
     };
   },
   (dispatch: Dispatch): Pick<Props, 'actions'> => ({
@@ -34,11 +37,20 @@ export interface Props extends RouteComponentProps<void> {
   })
 )
 export class Main extends React.Component<Props> {
-  private Map = withScriptjs(
+  private Root = withScriptjs(
     withGoogleMap(() => (
-      <>
-        <GeoMap />
-      </>
+      <div>
+        <GeoMap markers={this.props.markers}/>
+        <InputFile
+          onLoad={(data) => this.handleLoad(data as string)}
+          onError={(event) => console.log(event)}
+        />
+        <button onClick={() => this.props.actions.showMarkers()}>Show places</button>
+        <PlaceList places={this.props.places}
+                   columns={this.props.columns}
+                   onColumnMove={this.onColumnMove}
+        />
+      </div>
     ))
   );
 
@@ -46,28 +58,18 @@ export class Main extends React.Component<Props> {
     this.props.actions.loadTable(data);
   }
 
-  private onColumnMove = (params: MoveColumnParams) => {
+  private onColumnMove = (params: MoveColumnPayload) => {
     this.props.actions.moveColumn(params);
   };
 
   render() {
-    const Map = this.Map;
+    const Root = this.Root;
 
-    return <div>
-      <Map
-        googleMapURL={environment.googleMapURL}
-        loadingElement={<div>Loading...</div>}
-        containerElement={<div className={style.container} />}
-        mapElement={<div className={style.map} />}
-      />
-      <InputFile
-        onLoad={(data) => this.handleLoad(data as string)}
-        onError={(event) => console.log(event)}
-      />
-      <PlaceList places={this.props.places}
-                 columns={this.props.columns}
-                 onColumnMove={this.onColumnMove}
-      />
-    </div>;
+    return <Root
+      googleMapURL={environment.googleMapURL}
+      loadingElement={<div>Loading...</div>}
+      containerElement={<div className={style.container} />}
+      mapElement={<div className={style.map} />}
+    />;
   }
 }
