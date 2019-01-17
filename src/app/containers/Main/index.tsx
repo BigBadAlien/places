@@ -32,7 +32,7 @@ export interface Props extends RouteComponentProps<void> {
 @connect(
   (state: RootState): Pick<Props, 'places' | 'columns' | 'markers' | 'tablesHistory' | 'currentPaceTableId'> => {
     return {
-      places: (typeof state.place.currentPaceTableId === 'number' && state.place.places[state.place.currentPaceTableId]) || [],
+      places: state.place.places[state.place.currentPaceTableId] || [],
       tablesHistory: state.place.places.map((_place, tableIndex) => tableIndex),
       currentPaceTableId: state.place.currentPaceTableId,
       columns: state.place.columns,

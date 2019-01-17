@@ -9,7 +9,7 @@ import { SetCurrentTablePayload } from '../models/Table';
 
 export const initialState: RootState.PlaceState = {
   places: [],
-  currentPaceTableId: undefined,
+  currentPaceTableId: 0,
   columns: [
     'Address',
     'City',
@@ -35,7 +35,7 @@ export const placeReducer = handleActions<RootState.PlaceState, any>(
     },
     [PlaceActions.Type.MOVE_COLUMN]: (state, action: Action<MoveColumnPayload>) => {
       const places = state.places;
-      places[state.currentPaceTableId || 0] = places[state.currentPaceTableId || 0].map((place) => {
+      places[state.currentPaceTableId] = places[state.currentPaceTableId].map((place) => {
         if (action.type === PlaceActions.Type.MOVE_COLUMN) {
           const element = place[action.payload!.from];
           place.splice(action.payload!.from, 1);
@@ -59,7 +59,7 @@ export const placeReducer = handleActions<RootState.PlaceState, any>(
     },
     [PlaceActions.Type.GENERATE_COLORS]: (state) => {
       return Object.assign({}, state, {
-        colors: Array.from(new Set(state.places[state.currentPaceTableId || 0].map((place) => place[CATEGORY_COLUMN_INDEX])))
+        colors: Array.from(new Set(state.places[state.currentPaceTableId].map((place) => place[CATEGORY_COLUMN_INDEX])))
           .reduce((acc, category) => {
             return {
               ...acc,

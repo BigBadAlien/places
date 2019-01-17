@@ -46,7 +46,7 @@ export namespace PlaceActions {
       dispatch(generateColors());
       const state = getState();
 
-      const queue = fetchPositions(state.place.places[state.place.currentPaceTableId || 0]);
+      const queue = fetchPositions(state.place.places[state.place.currentPaceTableId]);
 
         queue.forEach((fetchPositionRequest) => {
           fetchPositionRequest.then((result) => dispatch(setMarker({
