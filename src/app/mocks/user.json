@@ -1,0 +1,17 @@
+{
+  "id": "user_OCHy0G45SLmKcRZc",
+  "created_at": 1452249298,
+  "email": "2@test.com",
+  "first_name": null,
+  "last_name": null,
+  "admin": true,
+  "account": {
+    "id": "acc_WcuWD6gDzNsop4lE",
+    "created_at": "2016-01-08 10:34:58 +0000",
+    "livemode": true,
+    "name": "1",
+    "balance": "150000.0",
+    "card_number": "1111222233334444",
+    "status": "active"
+  }
+}

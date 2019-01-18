@@ -1,5 +1,5 @@
 
-export interface User {
+export interface ApiUserResponse {
   id: string,
   created_at: number,
   email: string;
