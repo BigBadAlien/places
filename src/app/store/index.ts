@@ -11,22 +11,27 @@ export function configureStore(initialState?: RootState): Store<RootState> {
   let middleware = applyMiddleware(
     loggerMiddleware,
     thunkMiddleware,
-    save({ states: ['place.places'], debounce: 500 }));
+    save({ states: ['place.places', 'auth.user'], debounce: 500 }));
 
   if (process.env.NODE_ENV !== 'production') {
     middleware = composeWithDevTools(middleware);
   }
 
-  const cache = load({ states: ['place.places']}) as Partial<RootState>;
+  const cache = load({ states: ['place.places', 'auth.user']}) as Partial<RootState>;
+
+  if (!initialState) {
+    initialState = {
+      place: placeInitialState,
+      auth: authInitialState,
+    };
+  }
 
   if (cache && cache.place && cache.place.places) {
-    if (!initialState) {
-      initialState = {
-        place: placeInitialState,
-        auth: authInitialState,
-      };
-    }
     initialState.place.places = cache.place.places;
+  }
+
+  if (cache && cache.auth && cache.auth.user) {
+    initialState.auth.user = cache.auth.user;
   }
 
   const store = createStore(rootReducer as any, initialState as any, middleware) as Store<RootState>;
