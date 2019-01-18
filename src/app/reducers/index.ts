@@ -3,6 +3,8 @@ import { placeReducer } from 'app/reducers/place';
 import PlaceState = RootState.PlaceState;
 import { Place } from "app/models/Place";
 import { MarkerData } from '../models/MarkerData';
+import { ApiUserResponse } from '../models/ApiUserResponse';
+import { ApiError } from '../models/ApiError';
 
 export namespace RootState {
   export interface PlaceState {
@@ -13,6 +15,10 @@ export namespace RootState {
     colors: {
       [key: string]: 'string',
     }
+  }
+  export interface AuthState {
+    user: ApiUserResponse | undefined;
+    error: Error | ApiError | {} | undefined,
   }
 }
 

@@ -12,6 +12,7 @@ export namespace AuthActions {
   export enum Type {
     AUTH_SET_CURRENT_USER = 'AUTH_SET_CURRENT_USER',
     AUTH_SET_ERROR = 'AUTH_SET_ERROR',
+    AUTH_RESET_ERROR = 'AUTH_RESET_ERROR',
   }
 
   export const signIn = function (
@@ -37,6 +38,7 @@ export namespace AuthActions {
 
   export const setCurrentUser = createAction<ApiUserResponse>(Type.AUTH_SET_CURRENT_USER);
   export const setAuthError = createAction<Error | ApiError>(Type.AUTH_SET_ERROR);
+  export const resetAutError = createAction<void>(Type.AUTH_RESET_ERROR);
 }
 
 export type AuthActions = Omit<typeof AuthActions, 'Type'>;
