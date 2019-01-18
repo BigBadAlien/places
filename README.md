@@ -49,7 +49,7 @@ Open `http://localhost:8080` in browser
 
 To log out clear local storage.
 
-Implemented simplest auth with only one request without any additional checks. Should be ok for the test example.
+Implemented simplest authentication with only one request without any additional checks. Should be ok for the test example.
 
 Authentication tested with credential:
 
