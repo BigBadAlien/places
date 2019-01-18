@@ -12,7 +12,7 @@ import { initialState } from '../reducers/place';
 import { ADDRESS_COLUMN_INDEX, CATEGORY_COLUMN_INDEX } from '../models/Place';
 
 const middlewares = [thunk];
-const mockStore = configureMockStore<RootState, ThunkAction<void, RootState, void, AnyAction>>(middlewares);
+const mockStore = configureMockStore<Pick<RootState, 'place'>, ThunkAction<void, RootState, void, AnyAction>>(middlewares);
 
 PlaceActions.GMapApiFetchPositionByAddress = jest.fn().mockResolvedValue((geocodeSearch as any).results[0].geometry.location);
 

@@ -5,6 +5,7 @@ import { loggerMiddleware } from 'app/middleware/loggerMiddleware';
 import thunkMiddleware from 'redux-thunk';
 import { load, save } from "redux-localstorage-simple"
 import { initialState as placeInitialState } from '../reducers/place';
+import { initialState as authInitialState } from '../reducers/auth';
 
 export function configureStore(initialState?: RootState): Store<RootState> {
   let middleware = applyMiddleware(
@@ -21,7 +22,8 @@ export function configureStore(initialState?: RootState): Store<RootState> {
   if (cache && cache.place && cache.place.places) {
     if (!initialState) {
       initialState = {
-        place: placeInitialState
+        place: placeInitialState,
+        auth: authInitialState,
       };
     }
     initialState.place.places = cache.place.places;

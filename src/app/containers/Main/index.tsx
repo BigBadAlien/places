@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import { RootState } from "app/reducers";
 import { InputFile } from "app/components/InputFile";
 import { Place } from '../../models/Place';
-import '!style-loader!css-loader!antd/dist/antd.css'
 import { PlaceList } from '../../components/PlaceList';
 import { MoveColumnPayload } from '../../models/MoveColumnPayload';
 import { withGoogleMap, withScriptjs } from 'react-google-maps';

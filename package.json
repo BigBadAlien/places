@@ -8,7 +8,9 @@
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "dev": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
-    "build": "webpack -p --progress --colors"
+    "build": "webpack -p --progress --colors",
+    "server": "node server.js",
+    "start": "npm run-script build && npm run-script server"
   },
   "license": "MIT",
   "devDependencies": {
@@ -62,6 +64,9 @@
     "fetch-mock": "^7.3.0",
     "jest": "^23.6.0",
     "jest-fetch-mock": "^2.1.0",
+    "koa": "^1.4.0",
+    "koa-rewrite": "^1.1.2",
+    "koa-static": "2",
     "react": "^16.5.2",
     "react-beautiful-dnd": "^10.0.3",
     "react-dom": "^16.5.2",

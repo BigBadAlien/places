@@ -15,7 +15,7 @@ describe('Auth reducer', () => {
   });
 
   it('setAuthError', () => {
-    expect(authReducer(Object.assign({}, initialState, {error: authError}), AuthActions.resetAutError()))
+    expect(authReducer(Object.assign({}, initialState, {error: authError}), AuthActions.resetAuthError()))
       .toMatchObject({error: undefined});
   });
 });
