@@ -1,7 +1,7 @@
 
 # Places
 
-Main files and folders:
+Main folders:
 
 * [src/app/actions](src/app/actions)
 * [src/app/components](src/app/components)
