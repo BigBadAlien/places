@@ -36,16 +36,16 @@ describe('Auth actions', () => {
 
   it('Fail authentication', async () => {
     fetchMock
-      .mockResponseOnce(authErrorString);
+      .mockResponseOnce(authErrorString, {status: 401});
 
     const store = mockStore();
 
     return store.dispatch<any>(signIn({email: 'foobar@mail.com', password: 'foobarpassword'})).then(() => {
       expect(store.getActions()).toEqual([
         {
-          type: 'AUTH_SET_CURRENT_USER',
+          type: 'AUTH_SET_ERROR',
           payload: authError
-        }]);
+        }]);store.getActions();
       expect(fetchMock.mock.calls.length).toEqual(1);
     })
   });
